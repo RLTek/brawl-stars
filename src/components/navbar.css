@@ -1,0 +1,43 @@
+#navbar{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    background-color: yellow;
+    margin: 0;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+#navbar-page{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#hero{
+    width: 100%;
+    
+    
+}
+
+h1{
+    background-color: blue;
+    margin: 0;
+}
+
+#brawl{
+    color: white;
+    text-shadow: 2px 2px 0px black, -2px -2px 0px black;
+}
+
+#stars{
+    color: red;
+    text-shadow: 2px 2px 0px black, -2px -2px 0px black;
+}
+
+@media screen and (min-width: 600px){
+    #hero{
+        height: 40em;
+    }
+}

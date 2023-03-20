@@ -1,0 +1,20 @@
+#brawlers-page{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+#brawler-card{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1em;
+   justify-content: center;
+}
+
+#searchInput{
+    width: 10em;
+    margin: auto;
+    margin-top: .5em;
+}
