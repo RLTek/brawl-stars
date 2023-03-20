@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 
-import hero from '../images/brawl-stars.png'
+import hero from '../images/brawlStars.jpg'
 
 
 import './navbar.css'

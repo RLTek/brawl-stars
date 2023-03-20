@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom'
 
 import './brawlers.css'
 import Navbar from './navbar.js'
@@ -8,18 +9,27 @@ export default function Brawlers(){
     const [characters, setCharacters] = useState([])
     const [search, setSearch] = useState("")
 
+
+//Calls API to get a list of brawlers
     useEffect(() => {
         fetch('https://api.brawlapi.com/v1/brawlers')
         .then(res => res.json())
         .then(res => setCharacters(res))
     }, [])
 
+//maps the list of characters
     const characterList = characters.list?.map(character => <div>
-        <img src={character.imageUrl} alt={character.name}/>
-        <h2>{character.name}</h2>
+        <Link to="/brawler">
+            <img src={character.imageUrl} alt={character.name}/>
+            <h2>{character.name}</h2>
+        </Link>
     </div>)
 
-    
+//Filters and maps a list of characters based on user search
+    const filteredList = characters.list?.filter(c => c.name.toLowerCase().includes(search)).map(d => <div>
+        <img src={d.imageUrl} alt={d.name}/>
+        <h2>{d.name}</h2>
+    </div>)
 
 
     return(
@@ -29,7 +39,7 @@ export default function Brawlers(){
         <input id="searchInput" type="text" value={search} onChange={e => setSearch(e.target.value.toLowerCase())}/>
         <h2>Brawlers:</h2>
         <div id="brawler-card">
-        {characterList}
+        {search !== '' ? filteredList : characterList}
         </div>
         
         </div>
