@@ -14,10 +14,10 @@ export default function Modes(){
         .then(res => res.json())
         .then(res => setGameModes(res))
         .catch(err => console.log(err))
-    })
+    }, [])
 
 
-    const modeList = gameModes.list?.map(mode => <div key={mode.id}>
+    const modeList = gameModes.list?.map(mode => <div key={mode.id} >
         <Link to={`/modes/${mode.id}`}>
             <img src={mode.imageUrl} alt={mode.name} id="mode-pic"/>
             <h3>{mode.name}</h3>

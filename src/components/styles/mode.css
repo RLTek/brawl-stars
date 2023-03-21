@@ -1,0 +1,19 @@
+#gameMode-section{
+    text-align: center;
+}
+
+#mode-hero{
+    display: flex;
+    align-items: center;
+    padding-right: .5em;
+    padding-left: .5em;
+}
+
+#mode-logo{
+    width: 5em;
+    height: 5em;
+}
+
+#mode-banner{
+    width: 100%;
+}
