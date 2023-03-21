@@ -41,3 +41,10 @@ h1{
         height: 37em;
     }
 }
+
+#logo{
+    width: 1em;
+    height: 1em;
+    margin-top: .2em;
+    border-radius: 30%;
+}
