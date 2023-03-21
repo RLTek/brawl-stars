@@ -9,6 +9,8 @@ export default function MapPage(){
     const { id } = useParams();
     const [mapPage, setMapPage] = useState({})
 
+
+//Calls the API to get the map selected
     useEffect(() => {
         fetch(`https://api.brawlapi.com/v1/maps/${id}`)
         .then(res => res.json())

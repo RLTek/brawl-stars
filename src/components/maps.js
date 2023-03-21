@@ -9,6 +9,8 @@ export default function Maps(){
     const [maps, setMaps] = useState({});
     const [mapFilter, setMapFilter] = useState('all');
 
+
+//Calls the api to get a list of maps
     useEffect(() => {
         fetch('https://api.brawlapi.com/v1/maps')
         .then(res => res.json())
@@ -16,6 +18,7 @@ export default function Maps(){
         .catch(err => console.log(err))
     }, [])
 
+//maps through and displays the list of maps
     const mapsList = maps.list?.map(m => <div key={m.id}>
          <Link to={`/maps/${m.id}`}>
             <img src={m.imageUrl} alt={m.name} id="map-image"/>
@@ -23,6 +26,7 @@ export default function Maps(){
          </Link>
     </div>)
 
+//filters and displays the list of maps based on user selection
     const mapFilterList = maps.list?.filter(gameType => gameType.gameMode.name.toLowerCase().includes(mapFilter)).map(type => <div key={type.id}>
         <Link to={`/maps/${type.id}`}>
             <img src={type.imageUrl} alt={type.name} id="map-image"/>
@@ -37,7 +41,8 @@ export default function Maps(){
             <h4>Filter by Game Mode:</h4>
             <select id="map-drop" onChange={e => setMapFilter(e.target.value.toLowerCase())}>
                 <option>all</option>
-                <option>Showdown</option>
+                <option>Solo Showdown</option>
+                <option>Duo Showdown</option>
                 <option>Gem Grab</option>
                 <option>Brawl Ball</option>
                 <option>Hot Zone</option>

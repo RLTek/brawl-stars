@@ -9,6 +9,7 @@ export default function Modes(){
     const [gameModes, setGameModes] = useState({});
 
 
+//Calls the api to get a list of game modes
     useEffect(() => {
         fetch(`https://api.brawlapi.com/v1/gamemodes`)
         .then(res => res.json())
@@ -17,6 +18,7 @@ export default function Modes(){
     }, [])
 
 
+//Maps through and displays the list of game modes
     const modeList = gameModes.list?.map(mode => <div key={mode.id} >
         <Link to={`/modes/${mode.id}`}>
             <img src={mode.imageUrl} alt={mode.name} id="mode-pic"/>
@@ -24,7 +26,6 @@ export default function Modes(){
         </Link>
     </div>)
 
-    console.log(gameModes)
 
     return(
         <div id="mode-page">

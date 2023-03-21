@@ -10,6 +10,7 @@ export default function Mode(){
     const [gameMode, setGameMode] = useState({})
 
 
+//calls the API to get the game mode that was selected
     useEffect(() => {
         fetch(`https://api.brawlapi.com/v1/gamemodes/${id}`)
         .then(res => res.json())
@@ -17,17 +18,17 @@ export default function Mode(){
         .catch(err => console.log(err))
     }, [id])
 
+//handles changing the background color based on the game mode selected
     const colorChange = document.getElementById('gameMode-section');
 
     const handleColorChange = () => {
        if(colorChange){
         colorChange.style.background = gameMode.bgColor
-
        }
     }
     
         handleColorChange()
-    console.log(gameMode)
+    
 
     return(
         <div id="gameMode-page">
