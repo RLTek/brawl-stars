@@ -19,7 +19,7 @@ export default function MapPage(){
 
     
 
-console.log(mapPage)
+
 
     return(
         <div id="map-page">
