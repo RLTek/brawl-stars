@@ -19,8 +19,8 @@ export default function Modes(){
 
 
 //Maps through and displays the list of game modes
-    const modeList = gameModes.list?.map(mode => <div key={mode.id} >
-        <Link to={`/modes/${mode.id}`}>
+    const modeList = gameModes.list?.map(mode => <div key={mode.name}>
+        <Link to={`/modes/${mode.scId}`}>
             <img src={mode.imageUrl} alt={mode.name} id="mode-pic"/>
             <h3>{mode.name}</h3>
         </Link>

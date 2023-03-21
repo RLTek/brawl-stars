@@ -36,12 +36,21 @@ export default function Mode(){
             
             <div id="gameMode-section">
                 <img src={gameMode.imageUrl2} alt={gameMode.name} id="mode-banner"/>
-                <h2>{gameMode.name}</h2>
-                <h5>{gameMode.title}</h5>
-                <h5>{gameMode.shortDescription}</h5>
                 <div id="mode-hero">
+                    <div>
                     <img src={gameMode.imageUrl} alt={gameMode.name} id="mode-logo"/>
-                    <p>{gameMode.tutorial}</p>
+                    </div>
+                    <div>
+                        <h2>{gameMode.name}</h2>
+                        <h5>{gameMode.title}</h5>
+                        <h5>{gameMode.shortDescription}</h5>
+                    </div>
+                    <div>
+                    <img src={gameMode.imageUrl} alt={gameMode.name} id="mode-logo"/>
+                    </div>
+                </div>
+                <div id="description">
+                <p>{gameMode.tutorial}</p>        
                 </div>
             </div>
         </div>

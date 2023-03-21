@@ -34,10 +34,71 @@ export default function Maps(){
         </Link>
    </div>)
 
+//Handles changing the color of the background when a map filter is selected
+   const mapsPage = document.getElementById('mapsSection');
 
+   const changeBackground = () => {
+        
+            if(mapFilter === "all" && mapsPage){
+                mapsPage.style.background = "white"
+            }
+            else if(mapFilter === "heist"){
+                mapsPage.style.background = "#d65cd3"
+            }
+            else if(mapFilter === "volley brawl" || mapFilter === "duels"){
+                mapsPage.style.background = "#b8fb26"
+            }
+            else if(mapFilter === "solo showdown" || mapFilter === "duo showdown"){
+                mapsPage.style.background = "#81d621"
+            }
+            else if(mapFilter === "robo rumble" || mapFilter === "big game" || mapFilter === "boss fight" || mapFilter === "last stand" || mapFilter === "super city rampage"){
+                mapsPage.style.background = "#dc2423"
+            }
+            else if(mapFilter === "basket brawl"){
+                mapsPage.style.background = "#2fc4f9"
+            }
+            else if(mapFilter === "gem grab"){
+                mapsPage.style.background = "#9a3df3"
+            }
+            else if(mapFilter === "brawl ball"){
+                mapsPage.style.background = "#8ca0e0"
+            }
+            else if(mapFilter === "hot zone"){
+                mapsPage.style.background = "#e33b50"
+            }
+            else if(mapFilter === "knockout"){
+                mapsPage.style.background = "#f7831c"
+            }
+            else if(mapFilter === "wipeout"){
+                mapsPage.style.background = "#00cfff"
+            }
+            else if(mapFilter === "snowtel thieves"){
+                mapsPage.style.background = "#00da48"
+            }
+            else if(mapFilter === "hunter" || mapFilter === "hold tthe trophy"){
+                mapsPage.style.background = "#e337c1"
+            }
+            else if(mapFilter === "bot drop" || mapFilter === "payload"){
+                mapsPage.style.background = "#e33b50"
+            }
+            else if(mapFilter === "siege"){
+                mapsPage.style.background = "#f05031"
+            }
+            else if(mapFilter === "lone star"){
+                mapsPage.style.background = "#56cdea"
+            }
+            else if(mapFilter === "takedown"){
+                mapsPage.style.background = "#b606b0"
+            }
+   
+}
+
+   changeBackground()
+   
     return(
         <div id="maps-page">
             <Navbar />
+            <div id="mapsSection">
             <h4>Filter by Game Mode:</h4>
             <select id="map-drop" onChange={e => setMapFilter(e.target.value.toLowerCase())}>
                 <option>all</option>
@@ -67,6 +128,7 @@ export default function Maps(){
             <div id="maps-section">
                 
                 {mapFilter === "all" ? mapsList : mapFilterList}
+            </div>
             </div>
         </div>
     )

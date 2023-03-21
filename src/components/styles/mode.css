@@ -1,5 +1,7 @@
 #gameMode-section{
     text-align: center;
+    padding-bottom: 5em;
+    
 }
 
 #mode-hero{
@@ -7,6 +9,8 @@
     align-items: center;
     padding-right: .5em;
     padding-left: .5em;
+    justify-content: center;
+    gap: 2em;
 }
 
 #mode-logo{
@@ -16,4 +20,9 @@
 
 #mode-banner{
     width: 100%;
+}
+
+#description{
+    padding-right: 1em;
+    padding-left: 1em;
 }
