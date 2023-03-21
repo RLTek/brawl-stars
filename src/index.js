@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
 import Home from './components/Home';
-import Brawlers from './components/brawlers'
+import Brawlers from './components/brawlers';
+import Brawler from './components/brawler';
+
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -12,6 +15,7 @@ root.render(
   <Routes>
     <Route path="/" element={<Home/>}></Route>
     <Route path="/brawlers" element={<Brawlers />}></Route>
+    <Route path="/brawlers/:id" element={<Brawler />}></Route>
   </Routes>
   </BrowserRouter>
 );

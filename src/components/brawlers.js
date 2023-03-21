@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 
-import './brawlers.css'
+import './styles/brawlers.css'
 import Navbar from './navbar.js'
 
 
@@ -18,17 +18,19 @@ export default function Brawlers(){
     }, [])
 
 //maps the list of characters
-    const characterList = characters.list?.map(character => <div>
-        <Link to="/brawler">
+    const characterList = characters.list?.map(character => <div key={character.id}>
+        <Link to={`/brawlers/${character.id}`}>
             <img src={character.imageUrl} alt={character.name}/>
             <h2>{character.name}</h2>
         </Link>
     </div>)
 
 //Filters and maps a list of characters based on user search
-    const filteredList = characters.list?.filter(c => c.name.toLowerCase().includes(search)).map(d => <div>
-        <img src={d.imageUrl} alt={d.name}/>
-        <h2>{d.name}</h2>
+    const filteredList = characters.list?.filter(c => c.name.toLowerCase().includes(search)).map(d => <div key={d.id}>
+        <Link to={`/brawlers/${d.id}`}>
+            <img src={d.imageUrl} alt={d.name}/>
+            <h2>{d.name}</h2>
+        </Link>
     </div>)
 
 

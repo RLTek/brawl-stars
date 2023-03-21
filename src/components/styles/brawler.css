@@ -1,0 +1,12 @@
+#brawler-data{
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#gadgets{
+    display: flex;
+    justify-content: space-evenly;
+}

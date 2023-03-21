@@ -1,7 +1,7 @@
 
 
 
-import './Home.css';
+import './styles/Home.css';
 
 import Navbar from './navbar.js'
 
