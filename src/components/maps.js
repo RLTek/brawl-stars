@@ -17,13 +17,17 @@ export default function Maps(){
     }, [])
 
     const mapsList = maps.list?.map(m => <div key={m.id}>
-         <img src={m.imageUrl} alt={m.name} id="map-image"/>
-        <h3>{m.name}</h3>
+         <Link to={`/maps/${m.id}`}>
+            <img src={m.imageUrl} alt={m.name} id="map-image"/>
+            <h3>{m.name}</h3>
+         </Link>
     </div>)
 
     const mapFilterList = maps.list?.filter(gameType => gameType.gameMode.name.toLowerCase().includes(mapFilter)).map(type => <div key={type.id}>
-        <img src={type.imageUrl} alt={type.name} id="map-image"/>
-       <h3>{type.name}</h3>
+        <Link to={`/maps/${type.id}`}>
+            <img src={type.imageUrl} alt={type.name} id="map-image"/>
+            <h3>{type.name}</h3>
+        </Link>
    </div>)
 
 

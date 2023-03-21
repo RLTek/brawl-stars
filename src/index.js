@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Brawlers from './components/brawlers';
 import Brawler from './components/brawler';
 import Maps from './components/maps';
+import MapPage from './components/map-page';
 
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -18,6 +19,7 @@ root.render(
     <Route path="/brawlers" element={<Brawlers />}></Route>
     <Route path="/brawlers/:id" element={<Brawler />}></Route>
     <Route path="/maps" element={<Maps />}></Route>
+    <Route path="/maps/:id" element={<MapPage />}></Route>
   </Routes>
   </BrowserRouter>
 );
