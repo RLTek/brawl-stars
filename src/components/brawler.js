@@ -21,13 +21,13 @@ export default function Brawler(){
 
 //Maps through and displays the gadgets
     const gadgets = brawler.gadgets?.map(gadget => <div key={gadget.name}>
-        <h4>Name: {gadget.name}</h4>
+        <h4><img src={gadget.imageUrl} alt="gadget" id="gadget-pic"/> Name: {gadget.name}</h4>
         <p><b>Description:</b> {gadget.description}</p>
     </div>)
 
 //Maps through and displays the starpowers
 const starPowers = brawler.starPowers?.map(starPower => <div key={starPower.name}>
-    <h4>Name: {starPower.name}</h4>
+    <h4><img src={starPower.imageUrl} alt="starpower" id="starpower-pic"/> Name: {starPower.name}</h4>
     <p><b>Description:</b> {starPower.description}</p>
 </div>)
 

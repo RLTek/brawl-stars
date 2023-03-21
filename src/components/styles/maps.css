@@ -1,0 +1,23 @@
+#maps-section{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#map-image{
+    width: 10em;
+    height: 10em;
+}
+
+#maps-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#map-drop{
+    width: 10em;
+}

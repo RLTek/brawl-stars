@@ -18,3 +18,8 @@
     margin: auto;
     margin-top: .5em;
 }
+
+#gadget-pic, #starpower-pic{
+    width: 2em;
+    height: 2em;
+}

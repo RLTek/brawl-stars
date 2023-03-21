@@ -11,7 +11,9 @@ function Home() {
   return (
     <div id="home-page">
       <Navbar />
-      
+      <div>
+        <h2>Welcome!</h2>
+      </div>
     </div>
   );
 }
