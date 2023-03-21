@@ -1,0 +1,15 @@
+#mode-pic{
+    width: 6em;
+    height: 6em;
+}
+
+#mode-page{
+    text-align: center;
+}
+
+#mode-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}

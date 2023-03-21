@@ -8,6 +8,7 @@ import Brawler from './components/brawler';
 import Maps from './components/maps';
 import MapPage from './components/map-page';
 import Modes from './components/modes';
+import Mode from './components/mode';
 
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -22,6 +23,7 @@ root.render(
     <Route path="/maps" element={<Maps />}></Route>
     <Route path="/maps/:id" element={<MapPage />}></Route>
     <Route path="/modes" element={<Modes />}></Route>
+    <Route path="/modes/:id" element={<Mode />}></Route>
   </Routes>
   </BrowserRouter>
 );
