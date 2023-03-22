@@ -13,6 +13,7 @@ function Home() {
       <Navbar />
       <div>
         <h2>Welcome!</h2>
+        <p>Get info for your favorite brawlers, maps, game modes and more!</p>
       </div>
     </div>
   );

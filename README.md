@@ -1,3 +1,17 @@
+Project Title: Brawl Starspedia
+
+Description: An app for looking up the latest information for the game Brawl Stars
+
+Features: Look up brawlers, maps, game modes and events
+
+How to use: Navigate through the site using the nav bar on each page. Look up brawlers, maps, or game modes and then click one to see information about that brawler, map or game mode. 
+
+Technologies: React, react router, pokeapi.co, html, css, javascript
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
