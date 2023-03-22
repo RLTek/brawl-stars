@@ -19,7 +19,7 @@ export default function Brawlers(){
 
 //maps the list of characters
     const characterList = characters.list?.map(character => <div key={character.id}>
-        <Link to={`/brawlers/${character.id}`}>
+        <Link to={`/brawlers/${character.id}`} className="brawler-card">
             <img src={character.imageUrl} alt={character.name}/>
             <h2>{character.name}</h2>
         </Link>
@@ -27,7 +27,7 @@ export default function Brawlers(){
 
 //Filters and maps a list of characters based on user search
     const filteredList = characters.list?.filter(c => c.name.toLowerCase().includes(search)).map(d => <div key={d.id}>
-        <Link to={`/brawlers/${d.id}`}>
+        <Link to={`/brawlers/${d.id}`} className="brawler-card">
             <img src={d.imageUrl} alt={d.name}/>
             <h2>{d.name}</h2>
         </Link>

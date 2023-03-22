@@ -5,6 +5,7 @@
 
 #mode-page{
     text-align: center;
+    background-color: blue;
 }
 
 #mode-section{
@@ -12,4 +13,5 @@
     flex-wrap: wrap;
     gap: 2em;
     justify-content: center;
+    
 }

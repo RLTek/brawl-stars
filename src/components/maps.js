@@ -19,7 +19,7 @@ export default function Maps(){
     }, [])
 
 //maps through and displays the list of maps
-    const mapsList = maps.list?.map(m => <div key={m.id}>
+    const mapsList = maps.list?.map(m => <div key={m.id} className="mode-card"> 
          <Link to={`/maps/${m.id}`}>
             <img src={m.imageUrl} alt={m.name} id="map-image"/>
             <h3>{m.name}</h3>
@@ -27,7 +27,7 @@ export default function Maps(){
     </div>)
 
 //filters and displays the list of maps based on user selection
-    const mapFilterList = maps.list?.filter(gameType => gameType.gameMode.name.toLowerCase().includes(mapFilter)).map(type => <div key={type.id}>
+    const mapFilterList = maps.list?.filter(gameType => gameType.gameMode.name.toLowerCase().includes(mapFilter)).map(type => <div key={type.id} className="mode-card">
         <Link to={`/maps/${type.id}`}>
             <img src={type.imageUrl} alt={type.name} id="map-image"/>
             <h3>{type.name}</h3>

@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    background-color: blue;
 }
 
 #brawler-card{
@@ -22,4 +23,8 @@
 #gadget-pic, #starpower-pic{
     width: 2em;
     height: 2em;
+}
+
+.brawler-card{
+    color: black;
 }
