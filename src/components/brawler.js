@@ -37,6 +37,7 @@ const starPowers = brawler.starPowers?.map(starPower => <div key={starPower.name
     const rare = "#68fd58"
     const superRare = "#5ab3ff";
     const epic = "#d850ff";
+    const mythic = "#fe5e72"
     const legendary = "#fff11e";
     const chromatic = "#f88f25";
 
@@ -59,6 +60,9 @@ const starPowers = brawler.starPowers?.map(starPower => <div key={starPower.name
         else if(rarity === "Epic"){
             backRare.style.background = epic
         }
+        else if(rarity === "Mythic"){
+            backRare.style.background = mythic
+        }
         else if(rarity === "Legendary"){
             backRare.style.background = legendary
         }
@@ -67,7 +71,7 @@ const starPowers = brawler.starPowers?.map(starPower => <div key={starPower.name
 //Calls the background changing function
     backgroundRare()
 
-
+console.log(brawler)
 
     return(
         <div id="brawler-page">
