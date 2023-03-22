@@ -9,6 +9,7 @@ import Maps from './components/maps';
 import MapPage from './components/map-page';
 import Modes from './components/modes';
 import Mode from './components/mode';
+import Events from './components/events';
 
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -24,6 +25,7 @@ root.render(
     <Route path="/maps/:id" element={<MapPage />}></Route>
     <Route path="/modes" element={<Modes />}></Route>
     <Route path="/modes/:id" element={<Mode />}></Route>
+    <Route path="/events" element={<Events />}></Route>
   </Routes>
   </BrowserRouter>
 );

@@ -20,7 +20,7 @@ export default function Navbar() {
             <Link to="/brawlers"><li>Brawlers</li></Link>
             <Link to="/maps"><li>Maps</li></Link>
             <Link to="/modes"><li>Modes</li></Link>
-            <Link><li>Events</li></Link>
+            <Link to="/events"><li>Events</li></Link>
         </ul>
         </header>
     )

@@ -1,0 +1,21 @@
+#event-pic{
+    width: 10em;
+    height: 10em;
+}
+
+#events-page{
+    background-color: blue;
+    text-align: center;
+}
+
+.events-component{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    font-size: smaller;
+}
+
+.active-events{
+    border: 2px solid black;
+}

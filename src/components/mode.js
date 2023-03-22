@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 import './styles/mode.css';
 import Navbar from './navbar';
@@ -44,6 +44,7 @@ export default function Mode(){
                         <h2>{gameMode.name}</h2>
                         <h5>{gameMode.title}</h5>
                         <h5>{gameMode.shortDescription}</h5>
+                        <Link to={gameMode.link} target="_blank"><h5>Get the latest stats for {gameMode.name}</h5></Link>
                     </div>
                     <div>
                     <img src={gameMode.imageUrl} alt={gameMode.name} id="mode-logo"/>
