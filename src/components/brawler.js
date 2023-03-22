@@ -71,8 +71,6 @@ const starPowers = brawler.starPowers?.map(starPower => <div key={starPower.name
 //Calls the background changing function
     backgroundRare()
 
-console.log(brawler)
-
     return(
         <div id="brawler-page">
             <Navbar />

@@ -22,7 +22,7 @@ export default function MapPage(){
     
 
 
-console.log(mapPage)
+
     return(
         <div id="map-page" style={{backgroundColor: mapPage.gameMode?.bgColor}}>
             <Navbar />

@@ -34,7 +34,7 @@ export default function Events() {
 
 
 
-    console.log(events)
+   
 
     return (
         <div id="events-page">
