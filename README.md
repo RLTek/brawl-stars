@@ -6,7 +6,7 @@ Features: Look up brawlers, maps, game modes and events
 
 How to use: Navigate through the site using the nav bar on each page. Look up brawlers, maps, or game modes and then click one to see information about that brawler, map or game mode. 
 
-Technologies: React, react router, pokeapi.co, html, css, javascript
+Technologies: React, react router, brawlAPI.com, brawlify.com html, css, javascript
 
 
 
