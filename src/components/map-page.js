@@ -22,14 +22,15 @@ export default function MapPage(){
     
 
 
-
+console.log(mapPage)
     return(
-        <div id="map-page">
+        <div id="map-page" style={{backgroundColor: mapPage.gameMode?.bgColor}}>
             <Navbar />
             <div id="map-data">
                <img src={mapPage?.imageUrl} alt={mapPage.name} id="map-pic"/>
                <h2>{mapPage.name}</h2>
                <h3>Game Mode: {mapPage.gameMode?.name}</h3>
+               <p>Environment type: {mapPage.environment.name}</p>
                <Link to={mapPage.link} target="_blank">Get the latest stats for {mapPage.name}</Link>
                
             </div>
