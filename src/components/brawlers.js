@@ -26,7 +26,7 @@ export default function Brawlers(){
     </div>)
 
 //Filters and maps a list of characters based on user search
-    const filteredList = characters.list?.filter(c => c.name.toLowerCase().includes(search)).map(d => <div key={d.id}>
+    const filteredList = characters.list?.filter(c => c.name.toLowerCase().includes(search.toLowerCase())).map(d => <div key={d.id}>
         <Link to={`/brawlers/${d.id}`} className="brawler-card">
             <img src={d.imageUrl} alt={d.name}/>
             <h2>{d.name}</h2>
@@ -38,7 +38,7 @@ export default function Brawlers(){
         <div id ="brawlers-page">
         <Navbar />
         <h3>Search for your favorite brawler:</h3>
-        <input id="searchInput" type="text" value={search} onChange={e => setSearch(e.target.value.toLowerCase())}/>
+        <input id="searchInput" type="text" value={search} onChange={e => setSearch(e.target.value)}/>
         <h2>Brawlers:</h2>
         <div id="brawler-card">
         {search !== '' ? filteredList : characterList}
